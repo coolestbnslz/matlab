@@ -1,0 +1,17 @@
+clc;
+clear all;
+f=@(x) x^2-29;
+a=input('enter the value of a');
+b=input('enter the value of b');
+c=(a+b)/2;
+e=input('enter the maximum error');
+while(abs(f(c))>=e)
+    c=(a+b)/2;
+    if(f(c)*f(b)<0)
+        a=c;
+    else
+        b=c;
+    end
+    
+end
+disp(c);
